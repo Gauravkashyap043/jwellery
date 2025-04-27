@@ -1,7 +1,9 @@
 import { StarIcon, HeartIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
+    <Link to={`/products/${product.id}`} className="group relative block">
     <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
       {/* Wishlist Button */}
       <button className="absolute top-4 right-4 z-10 p-2 bg-white/80 rounded-full backdrop-blur-sm hover:bg-rose-500 hover:text-white transition-colors">
@@ -40,6 +42,7 @@ const ProductCard = ({ product }) => {
         </button>
       </div>
     </div>
+    </Link>
   );
 };
 
